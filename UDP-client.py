@@ -11,9 +11,7 @@ serverAddress = (address, port)
 
 udpClient.sendto(b'', serverAddress)
 
-#bytearray("", 'utf-8')
-
-message = udpClient.recv(32).decode('utf-8')
+message = int.from_bytes(udpClient.recv(4))
 
 udpClient.close()
 

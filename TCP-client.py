@@ -11,6 +11,6 @@ serverAddress = (address, int(port))
 
 tcpClient.connect(serverAddress) # Siger at vores klient skal connecte til denne addresse
 
-print(tcpClient.recv(32).decode('utf-8'))
+print(int.from_bytes(tcpClient.recv(4)))
 
 tcpClient.close()
